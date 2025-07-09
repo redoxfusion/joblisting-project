@@ -144,14 +144,6 @@ def get_tags():
     except SQLAlchemyError as e:
         return jsonify({"error": "Failed to fetch tags", "details": str(e)}), 500
 
-import os
-import subprocess
-from flask import jsonify
-
-import os
-import subprocess
-from flask import jsonify
-
 @job_routes.route("/scrape", methods=["POST"])
 def run_scraper():
     try:
